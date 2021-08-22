@@ -22,7 +22,7 @@ namespace RefreshingCatch.CatchService
 
         public string Get(string key)
         {
-            if (_catch.Count >= _maxSize)
+            if (_catch.Count >= _maxCacheSize)
             {
                 var leastItem = LeastRecentItem();
                 _catch.Remove(leastItem);
